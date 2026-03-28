@@ -1,13 +1,21 @@
 [gd_scene format=3 uid="uid://dx4loc2srnu1f"]
 
-[ext_resource type="Texture2D" uid="uid://bxmjfdautis3w" path="res://Assets/icon.svg" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://bqoke5opkegtb" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://vhcwc60sor58" path="res://Assets/chef.png" id="2_cvnsp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0iea"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
+radius = 19.0
+height = 186.0
 
 [node name="Player" type="CharacterBody2D" unique_id=627486472]
+script = ExtResource("1_cvnsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1114191360]
-texture = ExtResource("1_v0iea")
+position = Vector2(430, 408)
+rotation = -0.74106187
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_cvnsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740116189]
-shape = SubResource("RectangleShape2D_v0iea")
+position = Vector2(467, 387)
+shape = SubResource("CapsuleShape2D_cvnsp")

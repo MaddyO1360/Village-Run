@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Village Run"
+run/main_scene="uid://dy2dfxbbdwi8b"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [physics]
 

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dy2dfxbbdwi8b"]
+
+[ext_resource type="PackedScene" uid="uid://dx4loc2srnu1f" path="res://Scenes/player.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://covy1iknju801" path="res://Scenes/ground.tscn" id="3_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://bxmjfdautis3w" path="res://Assets/icon.svg" id="4_3dryh"]
+
+[node name="main" type="Node2D" unique_id=154638227]
+
+[node name="player" parent="." unique_id=2108857749 instance=ExtResource("1_80nbo")]
+position = Vector2(-274, 71)
+
+[node name="ground" parent="." unique_id=1682936385 instance=ExtResource("3_wrm1d")]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=376367417]
+scale = Vector2(10, 10)
+scroll_scale = Vector2(5, 0)
+repeat_size = Vector2(87, 0)
+autoscroll = Vector2(27, 0)
+repeat_times = 2
+ignore_camera_scroll = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=377747111]
+position = Vector2(15.800003, 0)
+texture = ExtResource("4_3dryh")
