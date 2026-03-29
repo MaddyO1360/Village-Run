@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://css720yg466ql"]
 
 [ext_resource type="Texture2D" uid="uid://dn53ik1awxw8c" path="res://Assets/wagon.png" id="1_gmsoo"]
+[ext_resource type="Script" uid="uid://dtuy33e1x5oi" path="res://Scenes/fallingObject.gd" id="1_irjam"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_irjam"]
 radius = 30.72043
 height = 83.97686
 
 [node name="wagon" type="CharacterBody2D" unique_id=1470952581]
+script = ExtResource("1_irjam")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1099785428]
 scale = Vector2(0.25, 0.25)

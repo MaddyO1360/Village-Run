@@ -1,6 +1,7 @@
-extends Area2D
+extends CharacterBody2D
+
 const GRAVITY : int = 4200
-const SPEED : int = 300
+
 var sheep = preload("res://Scenes/sheep.tscn")
 var blacksheep = preload("res://Scenes/blacksheep.tscn")
 var cow = preload("res://Scenes/cow.tscn")
@@ -18,27 +19,22 @@ func _ready():
 # Called when the node enters the scene tree for the first time.
 
 func spawner():
-	
-	'''
 	print("SPAWNING")
 	var index = rng.randi_range(0, objects.size() - 1)
 	var scene = objects[index]
 	var new_object = scene.instantiate()
-	new_object.global_position = global_position
-	#new_object.global_position = Vector2(600, 400)
+	#new_object.global_position = global_position
+	new_object.global_position = Vector2(600, 400)
 	new_object.z_index = 100
 	get_parent().add_child(new_object)  # safer than add_sibling
-	'''
-	var index = rng.randi_range(0, 6)
-	var scene = objects[index]
-	var new_object = scene.instantiate()
 	
-	new_object.global_position = Vector2(800, 300)
-	new_object.scale = Vector2(1, 1)
-	new_object.z_index = 100
-	new_object.move_and_slide()
-	new_object.velocity.x += SPEED
-	get_tree().current_scene.add_child(new_object)
 	
 func _on_timer_timeout() -> void:
 	spawner()
+
+
+func _physics_process(_delta: float) -> void:
+	# plays the default running animation
+	$Sprite2D.play("default")
+	
+	

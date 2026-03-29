@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://bddv5ys4jr3f1"]
 
 [ext_resource type="Texture2D" uid="uid://dk4unsop0kssv" path="res://Assets/commoner.png" id="1_4g1sy"]
+[ext_resource type="Script" uid="uid://dtuy33e1x5oi" path="res://Scenes/fallingObject.gd" id="1_fg5jy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fg5jy"]
 radius = 21.0
 height = 98.0
 
 [node name="commoner" type="CharacterBody2D" unique_id=192597736]
+script = ExtResource("1_fg5jy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=148626238]
 scale = Vector2(0.25, 0.25)
