@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://2brsf3j782t3"]
+
+[ext_resource type="Texture2D" uid="uid://5qc26lo8jfc" path="res://Assets/cow.png" id="1_ss0fy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_asfwn"]
+size = Vector2(67, 58)
+
+[node name="cow" type="CharacterBody2D" unique_id=1875084458]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1772594707]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_ss0fy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=211672807]
+z_index = 1
+position = Vector2(2.5, 3)
+shape = SubResource("RectangleShape2D_asfwn")

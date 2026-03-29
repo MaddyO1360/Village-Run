@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://1i1cfh6lf3jq"]
+
+[ext_resource type="Texture2D" uid="uid://vhcwc60sor58" path="res://Assets/chef.png" id="1_sqin4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
+radius = 19.0
+height = 186.0
+
+[node name="chef" type="CharacterBody2D" unique_id=627486472]
+z_index = 1
+scale = Vector2(0.5, 0.5)
+
+[node name="chef" type="Sprite2D" parent="." unique_id=1114191360]
+position = Vector2(430, 408)
+rotation = -0.74106187
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_sqin4")
+
+[node name="chef2" type="CollisionShape2D" parent="." unique_id=1740116189]
+position = Vector2(467, 387)
+shape = SubResource("CapsuleShape2D_cvnsp")

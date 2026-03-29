@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c3an17avikc0e"]
+
+[ext_resource type="Texture2D" uid="uid://r0yqfvuuih2l" path="res://Assets/sheep.png" id="1_m4nbu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_35w1j"]
+radius = 18.653652
+height = 55.30465
+
+[node name="sheep" type="CharacterBody2D" unique_id=591048283]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=803374994]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_m4nbu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1242682021]
+z_index = 1
+position = Vector2(-12, -5)
+rotation = -0.8835276
+shape = SubResource("CapsuleShape2D_35w1j")

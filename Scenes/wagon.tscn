@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://css720yg466ql"]
+
+[ext_resource type="Texture2D" uid="uid://dn53ik1awxw8c" path="res://Assets/wagon.png" id="1_gmsoo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_irjam"]
+radius = 30.72043
+height = 83.97686
+
+[node name="wagon" type="CharacterBody2D" unique_id=1470952581]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1099785428]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_gmsoo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1200080716]
+z_index = 1
+position = Vector2(3.9999998, -0.99999994)
+rotation = 1.3830514
+shape = SubResource("CapsuleShape2D_irjam")

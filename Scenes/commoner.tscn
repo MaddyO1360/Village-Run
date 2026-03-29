@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bddv5ys4jr3f1"]
+
+[ext_resource type="Texture2D" uid="uid://dk4unsop0kssv" path="res://Assets/commoner.png" id="1_4g1sy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fg5jy"]
+radius = 21.0
+height = 98.0
+
+[node name="commoner" type="CharacterBody2D" unique_id=192597736]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=148626238]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_4g1sy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1085336831]
+z_index = 1
+position = Vector2(9.000001, -16.000002)
+rotation = -0.81023693
+shape = SubResource("CapsuleShape2D_fg5jy")

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bq3a47u0f4e16"]
+
+[ext_resource type="Texture2D" uid="uid://clb7psi6s6ehh" path="res://Assets/blackSheep.png" id="1_0e2bs"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rcir6"]
+radius = 22.0
+height = 56.0
+
+[node name="blacksheep" type="CharacterBody2D" unique_id=798575108]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=230422535]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_0e2bs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1044494866]
+z_index = 1
+position = Vector2(-13, -4)
+rotation = -0.86104715
+shape = SubResource("CapsuleShape2D_rcir6")

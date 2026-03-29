@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://d3v7b1s11ghpf"]
+
+[ext_resource type="Texture2D" uid="uid://bkxka15lfpust" path="res://Assets/villageSpriteSheet.png" id="1_fhp0g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofn1o"]
+atlas = ExtResource("1_fhp0g")
+region = Rect2(0, 0, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmqdu"]
+atlas = ExtResource("1_fhp0g")
+region = Rect2(2048, 0, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vn26p"]
+atlas = ExtResource("1_fhp0g")
+region = Rect2(0, 2048, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78u5i"]
+atlas = ExtResource("1_fhp0g")
+region = Rect2(2048, 2048, 2048, 2048)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_om0bm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofn1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmqdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vn26p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78u5i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ofn1o"]
+radius = 508.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=283617549]
+z_index = 1
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1978101606]
+position = Vector2(-32, -33)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_om0bm")
+frame_progress = 0.19323595
+speed_scale = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=751969348]
+position = Vector2(-31, 1)
+scale = Vector2(0.25, 0.25)
+shape = SubResource("CircleShape2D_ofn1o")
