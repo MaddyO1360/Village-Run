@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dbgd1g8lfc5l0"]
+
+[ext_resource type="Script" uid="uid://dqoqc71p42nd2" path="res://start_scrn.gd" id="1_5pglr"]
+[ext_resource type="Texture2D" uid="uid://dfwhr52l7jvtn" path="res://Assets/title.png" id="2_g8w5d"]
+
+[node name="StartScrn" type="Node2D" unique_id=850214760]
+script = ExtResource("1_5pglr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=308189225]
+position = Vector2(588, 327)
+scale = Vector2(0.5, 0.39268294)
+texture = ExtResource("2_g8w5d")
+
+[node name="Control" type="Control" parent="." unique_id=1606245463]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 217.0
+offset_right = 40.0
+offset_bottom = 257.0
+
+[node name="Start" type="Button" parent="Control" unique_id=1944569844]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 146.0
+offset_right = 640.0
+offset_bottom = 226.0
+theme_override_font_sizes/font_size = 32
+text = "Start Game"
+
+[node name="Quit" type="Button" parent="Control" unique_id=1942240112]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 287.0
+offset_right = 643.0
+offset_bottom = 367.0
+theme_override_font_sizes/font_size = 32
+text = "Quit
+"
+
+[connection signal="pressed" from="Control/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]

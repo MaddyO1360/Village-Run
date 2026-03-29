@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Village Run"
-run/main_scene="uid://dy2dfxbbdwi8b"
+run/main_scene="uid://dbgd1g8lfc5l0"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 

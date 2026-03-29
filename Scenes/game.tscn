@@ -14,7 +14,7 @@ size = Vector2(51, 76.5)
 
 [node name="main" type="Node2D" unique_id=154638227]
 
-[node name="player" parent="." unique_id=2108857749 instance=ExtResource("1_80nbo")]
+[node name="player" parent="." unique_id=2108857749 groups=["player"] instance=ExtResource("1_80nbo")]
 position = Vector2(-7, 312)
 
 [node name="bkgrnd" type="ParallaxBackground" parent="." unique_id=674995664]
@@ -79,10 +79,10 @@ scale = Vector2(0.049999997, 0.049999997)
 texture = ExtResource("5_ldgsr")
 centered = false
 
-[node name="Village" parent="." unique_id=283617549 instance=ExtResource("4_3dryh")]
+[node name="Village" parent="." unique_id=283617549 groups=["player"] instance=ExtResource("4_3dryh")]
 position = Vector2(953, 355)
 
-[node name="Area2D2" type="Area2D" parent="Village" unique_id=1907466134]
+[node name="Area2D2" type="Area2D" parent="Village" unique_id=1907466134 groups=["player"]]
 script = ExtResource("6_i6g32")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Village/Area2D2" unique_id=2046475283]
@@ -90,9 +90,15 @@ position = Vector2(-89, 20)
 shape = SubResource("RectangleShape2D_1l0tm")
 
 [node name="Timer" type="Timer" parent="." unique_id=1881347278]
+wait_time = 5.0
 autostart = true
 
 [node name="ground" parent="." unique_id=432074690 instance=ExtResource("3_wrm1d")]
 position = Vector2(456, 512)
 
+[node name="Timer2" type="Timer" parent="." unique_id=1117612374 groups=["player"]]
+wait_time = 600.0
+
+[connection signal="area_entered" from="Village/Area2D2" to="player" method="_on_area_2d_2_area_entered"]
 [connection signal="timeout" from="Timer" to="Village/Area2D2" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="player" method="_on_timer_2_timeout"]

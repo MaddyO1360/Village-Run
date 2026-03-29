@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dotdl33f77ftl"]
+
+[ext_resource type="Texture2D" uid="uid://uywq2mpb30j2" path="res://Assets/orig_big.png" id="1_j84t1"]
+
+[node name="Node2D" type="Node2D" unique_id=36858602]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=523310685]
+texture = ExtResource("1_j84t1")
+
+[node name="FoldableContainer" type="Label" parent="." unique_id=438742296]
+offset_left = -496.0
+offset_top = -112.0
+offset_right = 350.0
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(0.3321412, 0.73558134, 1.540184e-06, 1)
+theme_override_font_sizes/font_size = 200
+text = "You Win!"
