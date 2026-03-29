@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d3v7b1s11ghpf"]
 
 [ext_resource type="Texture2D" uid="uid://bkxka15lfpust" path="res://Assets/villageSpriteSheet.png" id="1_fhp0g"]
+[ext_resource type="Script" uid="uid://206ehc8r0uv2" path="res://Scenes/village.gd" id="1_ofn1o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ofn1o"]
 atlas = ExtResource("1_fhp0g")
@@ -43,12 +44,14 @@ radius = 508.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=283617549]
 z_index = 1
+slide_on_ceiling = false
+script = ExtResource("1_ofn1o")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1978101606]
 position = Vector2(-32, -33)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_om0bm")
-frame_progress = 0.19323595
+frame_progress = 0.110433966
 speed_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=751969348]
